@@ -1,0 +1,9 @@
+<h1>Login</h1>
+{% comment %} print form {%endcomment %} {% if error_message %}
+{{error_message}} {% endif %}
+
+<form action="" method="POST">
+  {% csrf_token %} {% comment %} print form received from view {% endcomment %}
+  {{form}} {% comment %} add button {% endcomment %}
+  <button type="submit">Login</button>
+</form>
